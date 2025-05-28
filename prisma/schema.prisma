@@ -18,4 +18,13 @@ model Product {
   name         String  @unique
   description  String
   price        Float
+  brand        String?
+  category     String
+  imageUrl     String
+  dim_width    Float?
+  dim_height   Float?
+  dim_length   Float?
+  // rating       Float?
+
 }
+
