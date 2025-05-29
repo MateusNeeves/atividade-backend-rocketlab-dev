@@ -46,6 +46,7 @@ export class CartService {
     return this.prisma.$transaction(async (prisma) => {
       const newCart = await prisma.cart.create({
         data: {
+          userId: createCartDto.userId,
           totalPrice: totalPrice
         }
       });

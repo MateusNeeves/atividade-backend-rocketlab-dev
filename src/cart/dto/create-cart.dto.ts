@@ -2,6 +2,10 @@ import { IsNotEmpty, IsNumber, Min, IsObject } from 'class-validator';
 import { Transform, Type } from 'class-transformer';
 
 export class CreateCartDto {
+  @IsNotEmpty()
+  @IsNumber()
+  userId: number;
+
   @IsObject()
   @Transform(({ value }) => {
     // Converte as strings para números tanto nas chaves quanto nos valores
